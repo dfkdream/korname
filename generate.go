@@ -3,7 +3,6 @@
 package korname
 
 import (
-	"log"
 	"math/rand"
 )
 
@@ -13,16 +12,6 @@ const (
 	//Female means female
 	Female
 )
-
-var namedata dataset
-
-func init() {
-	var err error
-	namedata, err = loadDataset("dataset.json")
-	if err != nil {
-		log.Fatal(err)
-	}
-}
 
 func pick(count int, set func(int) int) int {
 	sum := 0
